@@ -4,15 +4,15 @@ setlocal
 
 :menu
 cls
-echo 请选择一个选项:
-echo 1. 配置系统使用 OPI 代理
-echo 2. 禁用系统代理
-echo 3. 设置Git代理
-echo 4. 移除Git代理
-echo 5. 显示当前Git代理设置
-echo 0. 退出
+echo plesae select an option:
+echo 1. set system proxy to 192.168.31.46:7890
+echo 2. disable Windows Proxy
+echo 3. set git proxy to 127.0.0.1:7890
+echo 4. remove_git_proxy
+echo 5. show current git proxy settings
+echo 0. exit
 
-set /p choice=请输入选项编号: 
+set /p choice=Enter your choice: 
 
 if "%choice%"=="1" (
     python proxy.py enable_system_proxy
@@ -39,9 +39,9 @@ if "%choice%"=="4" (
 )
 
 if "%choice%"=="5" (
-    echo 当前HTTP代理设置:
+    echo current HTTP proxy settings:
     git config --global http.proxy
-    echo 当前HTTPS代理设置:
+    echo current HTTPS proxy settings:
     git config --global https.proxy
     pause
     goto menu
@@ -51,6 +51,6 @@ if "%choice%"=="0" (
     exit
 )
 
-echo 无效的选项，请重新输入。
+echo invalid choice, please try again
 pause
 goto menu

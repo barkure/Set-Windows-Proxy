@@ -60,7 +60,7 @@ if __name__ == "__main__":
         elif sys.argv[1] == "disable_system_proxy":
             disable_system_proxy()
         elif sys.argv[1] == "set_git_proxy":
-            set_git_proxy(proxy_address, proxy_port)
+            set_git_proxy(git_proxy_address, git_proxy_port)
         elif sys.argv[1] == "remove_git_proxy":
             remove_git_proxy()
     else:
