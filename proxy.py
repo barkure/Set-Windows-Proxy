@@ -47,8 +47,10 @@ def remove_git_proxy():
 
 
 # 配置信息
-proxy_address = "127.0.0.1"
+proxy_address = "192.168.31.46"
 proxy_port = "7890"
+git_proxy_address = "127.0.0.1"
+git_proxy_port = "7890"
 
 # 设置系统代理
 if __name__ == "__main__":
